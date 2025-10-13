@@ -10,7 +10,6 @@ public class Var implements Terme{
 	String name;
 
 	public static Var var(String name){
-		// VarSet varset = new VarSet(Set.of(name));
 		return new Var(name);
 	}
 

@@ -13,7 +13,6 @@ public class Function implements Terme{
 	Terme[] termes;
 
 	public static Function func(String name, Terme... termes){
-		// VarSet varset = new VarSet(Set.of(name));
 		return new Function(name, termes);
 	}
 
