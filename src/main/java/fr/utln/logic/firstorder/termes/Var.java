@@ -1,5 +1,6 @@
-package fr.univtln.spelerin.termes;
+package fr.utln.logic.firstorder.termes;
 
+import fr.utln.logic.firstorder.Interpretation;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
@@ -11,6 +12,10 @@ public class Var implements Terme{
 
 	public static Var var(String name){
 		return new Var(name);
+	}
+
+	public String eval(Interpretation interpretation){
+		return interpretation.getValues().get(name);
 	}
 
 	public String toString() {

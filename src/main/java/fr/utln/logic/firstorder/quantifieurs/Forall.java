@@ -1,7 +1,8 @@
-package fr.univtln.spelerin.quantifieurs;
+package fr.utln.logic.firstorder.quantifieurs;
 
-import fr.univtln.spelerin.Formule;
-import fr.univtln.spelerin.termes.Var;
+import fr.utln.logic.firstorder.Formule;
+import fr.utln.logic.firstorder.Interpretation;
+import fr.utln.logic.firstorder.termes.Var;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
@@ -22,5 +23,10 @@ public class Forall implements Formule{
 	@Override
 	public String toString(){
 		return "#" + var + post;
+	}
+
+	@Override
+	public boolean eval(Interpretation interpretation){
+		throw new UnsupportedOperationException("Unimplemented method 'eval'");
 	}
 }
