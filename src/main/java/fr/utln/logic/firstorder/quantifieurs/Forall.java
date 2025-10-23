@@ -1,7 +1,13 @@
 package fr.utln.logic.firstorder.quantifieurs;
 
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
+
 import fr.utln.logic.firstorder.Formule;
 import fr.utln.logic.firstorder.Interpretation;
+import fr.utln.logic.firstorder.example.family.AllPredicates;
 import fr.utln.logic.firstorder.termes.Var;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -27,6 +33,19 @@ public class Forall implements Formule{
 
 	@Override
 	public boolean eval(Interpretation interpretation){
-		throw new UnsupportedOperationException("Unimplemented method 'eval'");
+		Set<String> domaine = new HashSet<>();
+		domaine.addAll(AllPredicates.PERES.keySet());
+		domaine.addAll(AllPredicates.MERES.keySet());
+		
+		for (String value : domaine) {
+			Map<String, String> newValues = new HashMap<>(interpretation.getValues());
+			newValues.put(var.getName(), value);
+			Interpretation newInterpretation = new Interpretation(newValues);
+			
+			if (!post.eval(newInterpretation)) {
+				return false;
+			}
+		}
+		return true;
 	}
 }

@@ -22,6 +22,6 @@ public class Not implements Formule{
 
 	@Override
 	public boolean eval(Interpretation interpretation){
-		throw new UnsupportedOperationException("Unimplemented method 'eval'");
+		return !post.eval(interpretation);
 	}
 }

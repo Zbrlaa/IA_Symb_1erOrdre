@@ -8,7 +8,7 @@ import lombok.AllArgsConstructor;
 
 @AllArgsConstructor(access = lombok.AccessLevel.PRIVATE)
 public class AllPredicates{
-	private static final Map<String, String> PERES = Map.ofEntries(
+	public static final Map<String, String> PERES = Map.ofEntries(
         Map.entry("Jin", "Mathieu"),
         Map.entry("Amara", "Mathieu"),
         Map.entry("Noah", "Amir"),
@@ -16,7 +16,7 @@ public class AllPredicates{
         Map.entry("Kilian", "Noah")
     );
 
-    private static final Map<String, String> MERES = Map.ofEntries(
+    public static final Map<String, String> MERES = Map.ofEntries(
         Map.entry("Jin", "Chen"),
         Map.entry("Amara", "Chen"),
         Map.entry("Noah", "Laura"),

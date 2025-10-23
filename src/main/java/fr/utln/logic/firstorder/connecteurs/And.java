@@ -23,6 +23,6 @@ public class And implements Formule{
 
 	@Override
 	public boolean eval(Interpretation interpretation){
-		throw new UnsupportedOperationException("Unimplemented method 'eval'");
+		return pre.eval(interpretation) && post.eval(interpretation);
 	}
 }

@@ -11,6 +11,7 @@ import static fr.utln.logic.firstorder.quantifieurs.Forall.forall;
 import static fr.utln.logic.firstorder.termes.Function.func;
 import static fr.utln.logic.firstorder.termes.Var.var;
 
+import java.util.List;
 import java.util.Map;
 
 import fr.utln.logic.firstorder.example.family.AllFunctions;
@@ -40,6 +41,14 @@ public class App {
 		System.out.println(fun + " pour " + i + " : " + fun.eval(i));
 
 		Formule p = pred("mere", var("x"), var("y"));
-		System.out.println(p + " pour " + i + " : " + p.eval(i));
+		Formule pand = and(p,p);
+		Formule pequi = equi(p,p);
+		Formule pimpl = impl(p, p);
+		Formule pnot = not(p);
+		Formule por = or(p, p);
+
+		for(Formule test : List.of(pand,pequi,pimpl,pnot,por)){
+			System.out.println(test + " pour " + i + " : " + test.eval(i));
+		}
 	}
 }

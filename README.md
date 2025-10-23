@@ -1,7 +1,7 @@
 # IA Propositionnelle
-TP1 - 
+TP2 - 
 
 Voir conclusion dans App.java
 
 mvn clean compile
-mvn exec:java -Dexec.mainClass="fr.univtln.spelerin.App"
+mvn exec:java -Dexec.mainClass="fr.utln.logic.firstorder.App"
