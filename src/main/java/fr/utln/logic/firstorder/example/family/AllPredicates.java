@@ -9,20 +9,20 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor(access = lombok.AccessLevel.PRIVATE)
 public class AllPredicates{
 	public static final Map<String, String> PERES = Map.ofEntries(
-        Map.entry("Jin", "Mathieu"),
-        Map.entry("Amara", "Mathieu"),
-        Map.entry("Noah", "Amir"),
-        Map.entry("Jack", "Jin"),
-        Map.entry("Kilian", "Noah")
-    );
+		Map.entry("Jin", "Mathieu"),
+		Map.entry("Amara", "Mathieu"),
+		Map.entry("Noah", "Amir"),
+		Map.entry("Jack", "Jin"),
+		Map.entry("Kilian", "Noah")
+	);
 
-    public static final Map<String, String> MERES = Map.ofEntries(
-        Map.entry("Jin", "Chen"),
-        Map.entry("Amara", "Chen"),
-        Map.entry("Noah", "Laura"),
-        Map.entry("Jack", "Nia"),
-        Map.entry("Kilian", "Amara")
-    );
+	public static final Map<String, String> MERES = Map.ofEntries(
+		Map.entry("Jin", "Chen"),
+		Map.entry("Amara", "Chen"),
+		Map.entry("Noah", "Laura"),
+		Map.entry("Jack", "Nia"),
+		Map.entry("Kilian", "Amara")
+	);
 
 	public static void create(){
 		Predicate.addEval("pere", values -> {

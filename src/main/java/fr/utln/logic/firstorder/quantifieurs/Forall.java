@@ -33,6 +33,8 @@ public class Forall implements Formule{
 
 	@Override
 	public boolean eval(Interpretation interpretation){
+		//On pourrait faire une classe pour les domaines d'interprétation si on en avait plusieurs
+		//Mais pour le moment tout nos elements sont déjà dans les 2 prédicats
 		Set<String> domaine = new HashSet<>();
 		domaine.addAll(AllPredicates.PERES.keySet());
 		domaine.addAll(AllPredicates.MERES.keySet());
